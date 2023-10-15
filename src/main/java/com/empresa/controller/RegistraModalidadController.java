@@ -11,16 +11,12 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
-import com.empresa.entity.Deporte;
 import com.empresa.entity.Modalidad;
-import com.empresa.service.DeporteService;
 import com.empresa.service.ModalidadService;
 
 @Controller
 public class RegistraModalidadController {
 
-	@Autowired
-	private DeporteService deporteService;
 
 	@Autowired
 	private ModalidadService modalidadService;
@@ -30,11 +26,7 @@ public class RegistraModalidadController {
 		return "registraModalidad";
 	}
 
-	@GetMapping(value = "/listaDeporte")
-	@ResponseBody
-	public List<Deporte> cargaDeporte() {
-		return deporteService.listarTodos();
-	}
+
 
 	@PostMapping("/registraModalidad")
 	@ResponseBody

@@ -12,11 +12,11 @@ import com.empresa.repository.PaisRepository;
 public class PaisServiceImpl implements PaisService{
 
 	@Autowired
-	private PaisRepository repository; 
+	private PaisRepository repository;
 	
 	@Override
 	public List<Pais> listaPais() {
-		return repository.findAll();
+		return repository.listaPais();
 	}
 
 }
